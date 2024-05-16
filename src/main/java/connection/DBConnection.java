@@ -4,17 +4,31 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class DBConnection {
- public static Connection createConnection() {
-	 Connection conn = null;
-	 
-	 try {
-		 Class.forName("com.mysql.cj.jdbc.Driver");
-		 conn = DriverManager.getConnection("jdbc:mysql//localhost:3306/First","root","");
-	 }catch(Exception e) {
-		 e.printStackTrace();
-		 
-	 }
-	 return conn;
- }
- 
+	
+	public static Connection createConnection() {
+		Connection conn  = null;
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/First", "root","");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return conn;
+	}
+	
+	public static Connection createConnectionMsg() {
+		Connection conn = null;
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/message", "root", "");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return conn;
+	}
 }

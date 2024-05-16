@@ -7,7 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="UserController" method="post">
+<%
+	String msg = (String)request.getAttribute("msg");
+%>
+<%
+	if(msg != null){
+%>
+<h1><%out.print(msg);} %></h1>
+	<form action="UserServlet" method="post">
 		<table>		
 		     <tr>
 				<td>Email:</td>
@@ -20,12 +27,11 @@
 			</tr>
 			
 			<tr>
-				<td><input type="submit" name="action" value="login"></td>
+				<td><button type="submit" name="action" value="login">Login</button></td>
 			</tr>
 		
 		</table>
 	
 	</form>
-
 </body>
 </html>

@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="UserController" method="post">
+	<form action="UserServlet" method="post">
 		<table>
 			<tr>
 				<td>Name:</td>
@@ -35,12 +35,11 @@
 			</tr>
 			
 			<tr>
-				<td><input type="submit" name="action" value="register"></td>
+				<td><button type="submit" name="action" value="register">Register</button></td>
 			</tr>
 		
 		</table>
 	
 	</form>
-
 </body>
 </html>
